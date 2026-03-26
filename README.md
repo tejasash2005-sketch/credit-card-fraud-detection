@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Credit Card Fraud Detection Web App
 ![My level of Imagery, lol](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fai-journey.com%2Fwp-content%2Fuploads%2F2019%2F06%2Ffraud-EMV-chip-credit-card.jpg&f=1&nofb=1)
 
@@ -68,3 +69,6 @@ To Contact Us:
 - Ravikant Vijayvargiya
     - [Kaggle](https://www.kaggle.com/hungrywolf)
     - [LinkedIn](https://www.linkedin.com/in/ravikant-vijayvargiya/)
+=======
+# credit-card-fraud-detection
+>>>>>>> c767e9812eea2f6b2abc35c9829c0e3c9b89b1d7
