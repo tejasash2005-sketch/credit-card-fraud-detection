@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Card Fraud Detection Project Report</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #222;
+    }
+
+    h3 {
+      margin-top: 1rem;
+      color: #444;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    img {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 1rem auto;
+      border-radius: 8px;
+    }
+
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    .classification_accuracy {
+      background: #dee3e0;
+      padding: 15px;
+      margin: 15px 0;
+      text-align: center;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Credit Card Fraud Detection (Project Report)</h1>
+</header>
+
+<section>
+  <h2>Introduction</h2>
+
+  <p>
+    In today's world, we are on the express train to a cashless society. According to reports,
+    non-cash transactions are growing rapidly every year.
+  </p>
+
+  <img src="{{ url_for('static', filename='Non-Cash Trnsactions.jpeg') }}" />
+
+  <p>
+    While this growth is impressive, fraudulent transactions are also increasing.
+  </p>
+
+  <img src="{{ url_for('static', filename='Fraud-losses.png') }}" />
+
+  <p>
+    This project builds a Machine Learning Web App to detect such frauds effectively.
+  </p>
+</section>
+
+<section>
+  <h2>Model Training</h2>
+
+  <h3>Understanding the data</h3>
+
+  <p>
+    The dataset is highly imbalanced — very few fraud cases compared to valid ones.
+  </p>
+
+  <div class="classification_accuracy">
+    classification_accuracy = correct_predictions / total_predictions
+  </div>
+
+  <p>
+    Accuracy alone is misleading, so we use confusion matrix, precision, and recall.
+  </p>
+
+  <h3>Preprocessing</h3>
+
+  <p><strong>Balancing data:</strong> Using undersampling and oversampling.</p>
+  <p><strong>Scaling:</strong> Time and Amount features are normalized.</p>
+  <p><strong>Splitting:</strong> Train and test datasets created.</p>
+
+  <h3>Model</h3>
+
+  <p>
+    Logistic Regression is used for classification with optimized parameters.
+  </p>
+
+  <img src="{{ url_for('static', filename='Logistic-Regression.png') }}" />
+
+  <h3>Results</h3>
+
+  <p>
+    The confusion matrix helps evaluate model performance effectively.
+  </p>
+
+  <img src="{{ url_for('static', filename='Confusion_Matrix.png') }}" />
+</section>
+
+</body>
+</html>

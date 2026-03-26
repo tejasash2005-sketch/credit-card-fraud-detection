@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Credit Card Fraud Detection</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <h1 style="text-align: center;">Credit Card Fraud Detection</h1>
+  </div>
+</header>
+
+<!-- 🔥 Navigation (NEW) -->
+<div style="text-align:center; margin-top:10px;">
+  <a href="/">Home</a> |
+  <a href="/inform">About</a>
+</div>
+
+<div class="ml-container">
+
+  <p style="text-align: center;">
+    Enter <b>30 feature values</b> separated by space:
+  </p>
+
+  <!-- 🔥 FIXED FORM -->
+  <form action="{{ url_for('predict') }}" method="POST">
+
+    <div class="justify">
+      <textarea 
+        name="message" 
+        rows="8" 
+        cols="60"
+        placeholder="Example: -1.35 0.22 1.45 0.67 ... (30 values total)"
+        required>
+      </textarea>
+    </div>
+
+    <br>
+
+    <!-- 🔥 FIXED BUTTON -->
+    <div style="text-align:center;">
+      <input type="submit" class="btn-info" value="Predict">
+    </div>
+
+  </form>
+
+</div>
+
+</body>
+</html>
